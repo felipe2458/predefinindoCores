@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --cor-primary: darkgreen;
+}
+
+body{
+    background-color: rgb(85, 85, 85);
+}
+
+.config{
+    width: 100%;
+    height: 180px;
+    background-color: var(--cor-primary);
+    position: relative;
+}
+
+.config > h1{
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 20px;
+}
+
+input[type="color"] {
+    border: 3px solid whitesmoke;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+
+.conteudo{
+    width: 100%;
+    height: 350px;
+}
+
+.coresDefinir{
+    width: 70px;
+    height: 35px;
+    position: relative;
+    left: 40%;
+    top: 10%;
+    transform: translateX(-50%);
+}
+
+.coresDefinir:not(#corSelectConfig){
+    margin-left: 20px;
+}
+
+.container-defPre{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    left: calc(46% + 15px);
+    top: 28%;
+    transform: translateX(-50%);
+    border: 2px solid #F5F5F5;
+}
+
+#defPreConfig{
+    width: 25%;
+    height: 100%;
+    background-color: darkred;
+    float: left;
+    transition: 0.3s;
+}
+
+#defPreConteudo{
+    width: 75%;
+    height: 100%;
+    background-color: rgb(44, 44, 44);
+    float: right;
+    transition: 0.3s;
+}
+
+#defPreConteudo > h1{
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 30px;
+    transition: 0.3s;
+}
+
+#button{
+    width: 60px;
+    height: 35px;
+    cursor: pointer;
+    position: absolute;
+    left: 47%;
+    top: 75%;
+    transform: translate(-50%, -20%);
+    background-color: rgb(70, 110, 54);
+}
+
+.indice{
+    width: 350px;
+    height: 100px;
+    position: relative;
+    top: -10%;
+    margin-left: 20px;
+}
+
+#select-indice{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    outline: none;
+    position: relative;
+    left: 45%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(121, 11, 184);
+    color: whitesmoke;
+}
+
+#select-indice:focus{
+    background-color: rgb(99, 6, 122);
+}
+
+#select-indice > option{
+    background-color: rgb(72, 0, 139);
+}
+
+.container-predefinidos{
+    width: 100%;
+    height: 166px;
+    /*background-color: var(--cor-primary);*/
+}
+
+.container-predefinidos > h1{
+    text-align: center;
+    color: whitesmoke;
+    padding-top: 10px;
+    margin-bottom: 3px;
+}
+
+.predefinido-salvos{
+    width: 100%;
+    padding: 20px 0;
+    /*background-color: red;*/
+    display: flex;
+}
+
+.container-pre{
+    width: 60px;
+    height: 35px;
+    border: 2px solid whitesmoke;
+    cursor: pointer;
+    margin-left: 30px;
+    transition: 1s;
+    position: relative;
+}
+
+#container-predefinido-salvo-1{
+    margin-left: 20px;
+}
+
+.pre{
+    width: 35%;
+    height: 100%;
+    transition: 1s;
+}
+
+.pre-text{
+    width: 25px;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+}
