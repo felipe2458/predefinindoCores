@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 
 html,body{
@@ -10,7 +10,8 @@ html,body{
 }
 
 body{
-    background: linear-gradient(to left, #00eeff, #0084ff);
+    background-image: linear-gradient(to left, #00f7ff, #0066ff);
+    color: white;
 }
 
 input[type="color"]{
@@ -24,7 +25,8 @@ input[type="color"]{
     cursor: pointer;
     background: none;
     width: 70px;
-    height: 32px;
+    height: 30px;
+    border-radius: 10px;
 }
 
 input[type="color"]::-webkit-color-swatch-wrapper{
@@ -33,169 +35,191 @@ input[type="color"]::-webkit-color-swatch-wrapper{
 
 input[type="color"]::-webkit-color-swatch{
     border: none;
+    border-radius: 6px;
 }
 
-.header{
+.clear{
+    clear: both;
+}
+
+header{
     width: 100%;
     height: 200px;
 }
 
-.header .container-titulo{
-    width: 100%;
-    height: 45%;
+header .container-titulo{
+    height: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.container-titulo h1{
-    color: white;
+header .container-titulo h2{
+    font-size: 35px;
     font-weight: 400;
 }
 
-.container-salvar{
-    width: 100%;
-    height: 55%;
-    display: flex;
+header .container-index{
+    height: 60%;
+    width: 500px;
+    text-align: center;
+    float: left;
 }
 
-.salvar-color{
-    width: 40%;
-    height: 100%;
+header .container-index h3{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+header .container-index select{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    background: linear-gradient(to right, rgb(0, 255, 200), rgb(0, 145, 89));
+    padding-left: 30px;
+    line-height: 20px;
+    color: white;
+}
+
+header .container-index select option{
+    background-color: rgb(99, 98, 98);
+}
+
+header .container-selc-cores{
+    height: 60%;
+    width: calc(100% - 500px);
+    float: right;
     padding-left: 50px;
 }
 
-.salvar-color h4{
-    color: white;
-    font-weight: 300;
-    padding-bottom: 10px;
-    text-align: center;
-}
-
-.container-selec{
-    width: 100%;
-    height: 70%;
+.container-selc-cores .inputColor-wraper{
     display: flex;
-    padding-top: 10px;
+    gap: 20px;
+}
+
+.inputSub-wraper{
+    min-height: 50px;
+    display: flex;
+    width: 250px;
+    align-items: center;
     justify-content: center;
+    padding-top: 25px;
 }
 
-.salvar-color .container-selec #selec-indice{
-    width: 100px;
-    height: 30px;
-    outline: none;
-    background: linear-gradient(to left, #009b6d, #00ffbf);
-    padding-left: 30px;
-    cursor: pointer;
-}
-
-#selec-indice option{
-    background-color: rgb(117, 117, 117);
-}
-
-.container-inputs{
-    width: 60%;
-    height: 100%;
-}
-
-.inputs{
-    margin-left: 10px;
-}
-
-#btn-salvar{
-    width: 60px;
+.container-selc-cores .inputSub-wraper input[type="submit"]{
+    width: 65px;
     height: 35px;
     background-color: crimson;
     cursor: pointer;
-    display: block;
-    margin: 15px 0 0 100px;
-    border-width: 3px;
     color: white;
 }
 
-.container-config{
+section.container-vs-pre{
     width: 100%;
-    height: calc(80vh - 200px);
+    height: 350px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding-top: 30px;
 }
 
-.config{
-    width: 500px;
-    height: 300px;
-    border: 3px solid whitesmoke;
-    display: flex;
-}
-
-#defPreConfig{
-    width: 30%;
+section.container-vs-pre .container-config{
+    width: 600px;
     height: 100%;
-    background-color: darkred;
-    transition: 0.5s;
 }
 
-#defPreConteudo{
-    width: 70%;
+.conteudo, .config, .text-wraper > h3{
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.container-config .conteudo{
+    width: 100%;
     height: 100%;
     background-color: #2c2c2c;
+    border: 3px solid whitesmoke;
+    border-radius: 20px;
     display: flex;
-    padding-top: 40px;
-    justify-content: center;
-    color: white;
-    transition: 0.5s;
 }
 
-#defPreConteudo h3{
+.container-config .conteudo .config{
+    width: 30%;
+    height: 100%;
+    background-color: #8b0000;
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+}
+
+.container-config .conteudo .text-wraper{
+    width: 70%;
+    height: 100%;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.conteudo .text-wraper h3{
     font-size: 20px;
     font-weight: 400;
-    transition: 0.5s;
 }
 
-.footer{
+footer{
     width: 100%;
-    height: 20vh;
-    text-align: center;
-    padding: 15px 5%;
-}
-
-.footer h2{
-    font-size: 20px;
-    color: white;
-    font-weight: 500;
-}
-
-.container-predefinicoes{
-    width: 100%;
-    padding: 10px 0;
+    height: 145px;
     display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+footer h3{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+footer .container-pre{
+    width: 100%;
+    padding: 10px 5%;
+    display: flex;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.preConteudo, .preConfig, .preTexto{
+    transition: background-color 0.8s;
 }
 
 .preConteudo{
     width: calc(100% / 14);
     height: 40px;
-    display: inline-block;
-    margin: 15px 0 0 20px;
-    cursor: pointer;
     border: 2px solid whitesmoke;
-    align-items: center;
-    position: relative;
-    transition: 1s;
+    margin: 0 10px;
+    display: flex;
+    border-radius: 10px;
 }
+
+/*.preConteudo:nth-of-type(even){
+    border: 2px solid black;
+}*/
 
 .preConfig{
+    width: 35%;
     height: 100%;
-    width: 30%;
-    position: relative;
-    top: 0;
-    transition: 1s;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
-.preText{
-    width: 50%;
+.preTexto-wraper{
+    width: 65%;
+    height: 100%;
+    background-color: initial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preTexto{
+    width: 70%;
     height: 5px;
-    position: absolute;
-    top: 15px;
-    left: calc(30% + 5px);
-    transition: 1s;
 }

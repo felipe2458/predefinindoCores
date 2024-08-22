@@ -5,138 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
-    <title>Projeto salvando predefinições</title>
+    <title>Predefinindo Cores</title>
 </head>
 <body>
-    <header class="header">
+    <header>
         <div class="container-titulo">
-            <h1>Defina a cor que você deseja salvar</h1>
-        </div><!-- Container de Titulo -->
+            <h2>Defina a cor que você deseja salvar</h2>
+        </div><!--container-titulo-->
 
-        <div class="container-salvar">
-            <div class="salvar-color">
-                <h4>Selecione a posição que você deseja salvar:</h4>
+        <div class="container-index">
+            <h3>Selecione a posição que você deseja salvar:</h3>
 
-                <div class="container-selec">
-                    <select id="selec-indice">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                    </select><!-- selec-indice -->
-                </div><!-- container-selec -->
+            <select id="index"></select>
 
-            </div><!-- salvar-color -->
+        </div><!--container-indice-->
 
-            <div class="container-inputs">
-                <input type="color" class="inputs" id="corConfig" value="#8B0000">
-                <input type="color" class="inputs" id="corConteudo" value="#2c2c2c">
-                <input type="color" class="inputs" id="corTexto" value="#F5F5F5">
-                <input type="submit" value="Salvar" id="btn-salvar">
-            </div><!-- container-inputs -->
-        </div><!-- container-salvar -->
-    </header><!-- Header -->
+        <div class="container-selc-cores">
+            <div class="inputColor-wraper">
+                <input type="color" id="corConfig" value="#8b0000" title="Cor das configurações">
+                <input type="color" id="corConteudo" value="#2c2c2c" title="Cor do conteúdo">
+                <input type="color" id="corTexto" value="#f5f5f5" title="Cor do texto">
+            </div><!--input-wraper-->
+            <div class="inputSub-wraper">
+                <input type="submit" value="Salvar" id="btnSalvar">
+            </div><!--input-wraper-->
+        </div><!--container-selc-cores-->
 
-    <section class="container-config">
-        <div class="config">
-            <div id="defPreConfig"></div><!-- defPreConfig -->
+        <div class="clear"></div><!--clear-->
 
-            <div id="defPreConteudo">
-                <h3 id="defPreTexto">O seu texto irá ficar assim.</h3>
-            </div><!-- defPreConteudo -->
-        </div><!-- config -->
-    </section><!-- container-config -->
+    </header><!--header-->
 
-    <footer class="footer">
-        <div class="conatiner-titulo-footer">
-            <h2>Lista de predefinições</h2>
-        </div><!-- container-titulo-footer -->
+    <section class="container-vs-pre">
 
-        <div class="container-predefinicoes">
-            <div class="preConteudo" style="background-color: #B87333;">
-                <div class="preText" style="background-color: #000000;"></div><!-- preText -->
-                <div class="preConfig" style="background-color: #4CAF50;"></div><!-- preConfig -->
-            </div><!-- preConteudo -->
+        <div class="container-config">
+            <div class="conteudo" id="conteudo">
+                <div class="config" id="config"></div>
+                <div class="text-wraper" id="text-wraper">
+                    <h3>O seu texto irá ficar assim.</h3>
+                </div><!--text-wraper-->
+            </div><!--conteudo-->
+        </div><!--container-config-->
 
-            <div class="preConteudo" style="background-color: #FF007F;">
-                <div class="preText" style="background-color: #ffffff;"></div><!-- preText -->
-                <div class="preConfig" style="background-color: #d52dff;"></div><!-- preConfig -->
-            </div><!-- preConteudo -->
+    </section><!--container-vs-pre-->
 
-            <div class="preConteudo" style="background-color: #C0C0C0;">
-                <div class="preText" style="background-color: #000000;"></div><!-- preText -->
-                <div class="preConfig" style="background-color: #2986dd;"></div><!-- preConfig -->
-            </div><!-- preConteudo -->
-
-            <div class="preConteudo">
-                <div class="preText"></div><!-- preText -->
-                <div class="preConfig"></div><!-- preConfig -->
-            </div><!-- preConteudo -->
-
-            <div class="preConteudo">
-                <div class="preText"></div><!-- preText -->
-                <div class="preConfig"></div><!-- preConfig -->
-            </div><!-- preConteudo -->
-
-            <div class="preConteudo">
-                <div class="preText"></div><!-- preText -->
-                <div class="preConfig"></div><!-- preConfig -->
-            </div><!-- preConteudo -->
-
-            <div class="preConteudo">
-                <div class="preText"></div><!-- preText -->
-                <div class="preConfig"></div><!-- preConfig -->
-            </div><!-- preConteudo -->
-
-            <div class="preConteudo">
-                <div class="preText"></div><!-- preText -->
-                <div class="preConfig"></div><!-- preConfig -->
-            </div><!-- preConteudo -->
-
-            <div class="preConteudo">
-                <div class="preText"></div><!-- preText -->
-                <div class="preConfig"></div><!-- preConfig -->
-            </div><!-- preConteudo -->
-
-            <div class="preConteudo">
-                <div class="preText"></div><!-- preText -->
-                <div class="preConfig"></div><!-- preConfig -->
-            </div><!-- preConteudo -->
-
-            <div class="preConteudo">
-                <div class="preText"></div><!-- preText -->
-                <div class="preConfig"></div><!-- preConfig -->
-            </div><!-- preConteudo -->
-
-            <div class="preConteudo">
-                <div class="preText"></div><!-- preText -->
-                <div class="preConfig"></div><!-- preConfig -->
-            </div><!-- preConteudo -->
-
-            <div class="preConteudo">
-                <div class="preText"></div><!-- preText -->
-                <div class="preConfig"></div><!-- preConfig -->
-            </div><!-- preConteudo -->
-
-            <div class="preConteudo">
-                <div class="preText"></div><!-- preText -->
-                <div class="preConfig"></div><!-- preConfig -->
-            </div><!-- preConteudo -->
-        </div><!-- container-predefinicoes -->
-
-    </footer><!-- Footer -->
+    <footer>
+        <h3>Lista de Pre-definições</h3>
+        <div class="container-pre" id="container-pre"></div><!--container-pre-->
+    </footer><!--footer-->
 </body>
 <script src="JS/script.js"></script>
 </html>
